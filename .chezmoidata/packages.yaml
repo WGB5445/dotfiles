@@ -2,9 +2,19 @@ packages:
   darwin:
     brews:
       - "git"
+      - "libpq"
+      - "cmake"
+      - "curl"
     casks:
       - "google-chrome"
   ubuntu:
     apts:
       - "git"
       - "vim"
+      - "cmake"
+      - "gcc"
+      - "libssl-dev"
+      - "pkg-config"
+      - "libclang-dev"
+      - "libpq-dev"
+      - "build-essential"

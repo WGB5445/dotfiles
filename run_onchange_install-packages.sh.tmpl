@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.os "darwin" -}}
+{{ if eq .osid "darwin" -}}
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
@@ -9,13 +9,17 @@ brew {{ . | quote }}
 cask {{ . | quote }}
 {{ end -}}
 
-{{ else if eq .chezmoi.os "linux"}}
+{{ else if eq .osid "linux-ubuntu" -}}
 #!/bin/bash
 
 sudo apt update
 {{ range .packages.ubuntu.apts -}}
-apt {{ . | quote }}
+sudo apt install -y {{ . | quote }}
+
 {{ end -}}
 
-EOF
+
+{{ else if eq .osid "linux-fedora" -}}
+ 
+
 {{ end -}}
