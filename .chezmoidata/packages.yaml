@@ -18,3 +18,14 @@ packages:
       - "libclang-dev"
       - "libpq-dev"
       - "build-essential"
+  windows:
+    wingets:
+      - "Neovim.Neovim"
+      - "Microsoft.PowerShell.Preview"
+      - "Starship.Starship"
+      - "agalwood.Motrix"
+      - "Kitware.CMake"
+      - "LLVM.LLVM"
+      - "Microsoft.VisualStudio.2022.BuildTools"
+      - "Rustlang.Rustup"
+      - "Rustlang.Rust.MSVC"
